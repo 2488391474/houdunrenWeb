@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import { env } from './types/helper';
+import userApis from './apis/user';
 
-  const response = await fetch('http://localhost:5173/api/info').then(r=>r.json())
-  console.log(response,"@@");
+const rs = await userApis.login()
+console.log(rs.data.token);
+
   
 </script>
 
