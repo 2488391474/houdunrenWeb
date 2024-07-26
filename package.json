@@ -1,0 +1,28 @@
+{
+  "name": "houdunrenweb",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.17.7",
+    "@types/node": "^20.14.12",
+    "loadsh": "^0.0.4",
+    "lodash": "^4.17.21",
+    "mockjs": "^1.1.0",
+    "vue": "^3.4.31",
+    "vue-router": "4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.5",
+    "tailwindcss": "^3.4.7",
+    "typescript": "^5.2.2",
+    "vite": "^5.3.4",
+    "vite-plugin-mock": "2.9.6",
+    "vue-tsc": "^2.0.24"
+  }
+}
