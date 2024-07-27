@@ -7,16 +7,21 @@ export interface userInfo {
 interface loginInterface{
     token:string
 }
+interface login{
+  account:string,
+  password:string
+}
 
 function info() {
   return http.request<userInfo>({
     url: "info",
   });
 }
-function login() {
+function login(data:login) {
   return http.request<loginInterface>({
-    method: "get",
+    method: "post",
     url: "login",
+    data: data
   });
 }
 
