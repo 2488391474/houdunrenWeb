@@ -1,4 +1,4 @@
-import { defineConfig, ConfigEnv, loadEnv } from "vite";
+import { defineConfig, ConfigEnv, loadEnv, optimizeDeps } from "vite";
 import vue from "@vitejs/plugin-vue";
 import alias from "./vite/alias";
 import { resolve } from "path";
@@ -15,6 +15,9 @@ export default ({command,mode}: ConfigEnv) => {
     plugins: setupPlugins(isBuild,env),
     resolve: {
       alias,
+    },
+    optimizeDeps: {
+      include: ['import-meta-glob'],
     },
   };
 };

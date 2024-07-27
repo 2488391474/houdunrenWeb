@@ -1,3 +1,4 @@
+import { env } from "@/utils/helper";
 import { RouteRecordRaw } from "vue-router";
 
 const layouts = import.meta.glob("../layouts/*.vue");
@@ -40,4 +41,6 @@ function getRouteByModule(file: string, module: { [key: string]: any }) {
   return Object.assign(route,module?.route);
 }
 
-export default getRoutes();
+const routes = env.VITE_ROUTE_AUTOLOAD ? getRoutes():[]
+
+export default routes;

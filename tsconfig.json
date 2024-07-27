@@ -1,16 +1,21 @@
 {
   "compilerOptions": {
-    "target": "es2017",
-    "forceConsistentCasingInFileNames": true,
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
     "moduleResolution": "Node",
-    "module":"ESnext",
     "strict": true,
-    "baseUrl": ".",
+    "jsx": "preserve",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "lib": ["ESNext", "DOM"],
+    "skipLibCheck": true,
+    "noEmit": true,
+    "baseUrl": "./",
     "paths": {
       "@/*": ["./src/*"]
     },
-    "types": ["vite/client"],
-    "esModuleInterop": true
   },
   "exclude": [
     "node_modules"
@@ -24,7 +29,7 @@
     "vite/**/*.ts",
     "mock/**/*.ts",
     "types/**/*.d.ts",
-    "types/**/*.ts"
+    "types/**/*.ts",
   ],
   
 }
